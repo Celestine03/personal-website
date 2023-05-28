@@ -1,0 +1,141 @@
+---
+title: Git basics - 10 steps to get started on Git
+date: '28 May 2023'
+description: Basic Git commands, branching and using Git for collaboration
+tags: tech
+id: 4
+---
+<h1>Introduction</h1> 
+<p>Want to learn git but don’t know where to start? No worries, I will be sharing with you some git basics to get you started!</p>
+
+<h1>What is Git?</h1> 
+<p>Git is a powerful version control system and one of the most widely used ones today. It is useful for keeping track of code changes and collaborating with other team members. Git can be used with other Git hosting services such as GitHub, GitLab, BitBucket. But in this article, we will be focusing on using Git with GitHub. Git and GitHub may sound similar, but they are not to be confused! Unlike git which is a command-line tool, GitHub is a graphical user interface and a Git repository hosting service.</p>
+
+<h1>1. Install git</h1> 
+<p>If you do not have git installed, you can visit <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> for instructions.</p>
+<h1>2. Setting up</h1>
+
+```
+git config --global user.name “your_username”
+git config --global user.email “your_github_email”
+```
+
+<p>On GitHub, create a new repository. To add a new remote repository as a shortname (in this case, “origin”), you can reference easily, copy the repository url and run:</p>
+
+```
+git remote add origin github_url
+```
+<h1>3. Create a local git repository</h1>
+<p>Unlike a remote repository that is hosted on a server and accessible to all team members, a local repository is only accessible to the owner of the device that it resides on. Open up a terminal and go to an existing directory where you want to create the local repository. If you want to create the repository in a new directory, use the mkdir (make directory) command to create a new directory. Next, use the cd (change directory) command to go into the new directory.</p>
+```
+mkdir project
+cd project
+```
+
+<p>Next, initialize a git repository:</p>
+```
+git init
+```
+<p>And, create a new branch called “main”:</p>
+```
+git branch -M main
+```
+<h1>4. Create and add a new file into the repository</h1>
+<p>Run the following command to create a new text file called ‘hello.txt’ into the current directory:</p>
+```
+touch hello.txt
+```
+
+<h1>5. Stage the file</h1>
+<p>Staged files are files that are ready to be committed to the repository. To stage a file, run:</p>
+```
+git add fileName 
+
+// OR to stage all files in the current directory
+git add . 
+```
+
+<p>Files that are staged are tracked by git - git knows about the files and they are added to the repository. Untracked files are in our working directory but not added to the repository. To check which files are staged / being tracked by Git, run:</p>
+```
+git status
+```
+
+<h1>6. Commit the file</h1>
+<p>Commits help us to keep track of our progress. Commits are like “checkpoints” which we can go back to if we want to make any changes. To commit a file, run:</p>
+```
+git commit -m “message”
+```
+<p>Note that message is to tell others what changes you have made. To view the history of commits for a repository, run:</p>
+```
+git log
+```
+
+<h1>7. Push the file</h1>
+<p>Push the file from the local repository to the remote repository:</p>
+```
+git push -u origin main 
+```
+<p>Now your code has been successfully updated on GitHub!</p>
+
+<h1>8. Branching</h1>
+<p>Branching is useful when we want to work on different parts of the project (e.g. different features or bug fixes) without interfering with the main branch. To create a new branch, run:</p>
+```
+git checkout -b new-branch-name
+```
+<p>At any point in time, you can switch between your new branch and your main branch:</p>
+```
+// to check which branch we are currently working on 
+git branch 
+// the asterisk marks the branch we are currently on
+
+// to switch to main branch
+git checkout main
+
+// to switch to new branch
+git checkout new-branch-name
+```
+
+<p>When we are done with the new branch, we can merge the changes with the main branch:</p>
+```
+// first switch back to the main branch if we are not on the main branch
+git checkout main
+
+// merge the changes
+git merge branchName
+```
+
+<p>Now, we can delete the new branch as it is no longer needed:</p>
+```
+git branch -d new-branch-name
+```
+
+<h1>9. Pull Request</h1>
+<p>Alternatively, if we want to share our new branch to enable collaboration, we can push the new branch to the remote repository:</p>
+```
+git push origin new-branch-name
+```
+
+<p>When your new branch is ready to be merged with the main branch, create a pull request (PR), by clicking on “Compare & Pull Request” button on GitHub. In a pull request, you will describe the changes and request your team members to review your code before putting the changes on the main branch. When your new branch is ready to be merged, click on the green “merge pull request” button. Afterwards, click the “Delete branch” button to delete your new branch, as it is no longer needed.</p>
+
+<h1>10. Collaborating</h1>
+<p>When collaborating, you and your team members will usually make changes to the same file. To ensure that you’re working on the most updated git repository, run:</p>
+```
+git pull 
+```
+
+<p>Note: git pull is equivalent to git fetch and git merge. Use git pull when you’re not currently working on any files and have no uncommitted files. Git pull will copy the changes from the remote repository to your local repository and your working directory. Else, use git fetch. Git fetch will fetch the latest changes from the remote repository to your local repository only:</p>
+```
+git fetch
+```
+
+<p>Afterwards, do git merge when you are ready to merge the remote changes to your main branch:</p>
+```
+// switch to main branch first if you are not on it
+git checkout main
+
+// merge changes
+git merge origin/main
+```
+
+<h1>Conclusion</h1>
+<p>There’s still a lot to learn about Git, but that’s it for now! I hope that this article deepened your understanding of Git in one way or another. If you found any mistakes along the way, feel free to let me know <a href="/">here</a>. Happy learning!</p>

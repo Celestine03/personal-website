@@ -18,7 +18,7 @@ export default function Navbar() {
     }
 
     return (
-      <Image className="mx-20 h-auto w-auto"
+      <Image className=""
         role="button"
         onClick={() => setTheme(theme === "dark" ? 'light' : 'dark')}
         src={theme === "dark" ? "/sun-icon.png" : "/moon-icon.png"}
@@ -30,15 +30,15 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-blue-300 dark:bg-slate-800 p-5 sticky top-0 z-10">
-      <div className="prose lg:prose-xl flex flex-row sm:flex-auto space-x-4 justify-end">
-        <Link href="">
-          <p className="flex text-xl font-semibold px-4 rounded-full border border-transparent item-center transition-colors hover:border-gray-400 hover:bg-white hover:text-blue-300 hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30 hover:dark:text-white">
+    <nav className="bg-blue-300 dark:bg-slate-800 p-3 sticky top-0 z-10">
+      <div className="lg:text-xl flex flex-row m-3 space-x-4 justify-end">
+        <Link href="/">
+          <p className="flex text-xl font-semibold px-4 rounded-full item-center transition-colors dark:text-white hover:border-gray-400 hover:bg-white hover:text-blue-300 hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30 hover:dark:text-white">
             Home
           </p>
         </Link>
-        <Link href="">
-          <p className="flex text-xl font-semibold px-4 rounded-full border border-transparent item-center transition-colors hover:border-gray-400 hover:bg-white hover:text-blue-300 hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30 hover:dark:text-white">
+        <Link href="/thoughts">
+          <p className="flex text-xl font-semibold px-4 rounded-full item-center transition-colors dark:text-white hover:border-gray-400 hover:bg-white hover:text-blue-300 hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30 hover:dark:text-white">
             Thoughts
           </p>
         </Link>
