@@ -22,7 +22,7 @@ export default function About() {
       </div>
       <div className="flex flex-col -mb-10 group">
         <Link
-          href="/"
+          href="https://github.com/Celestine03"
           className="p-3 space-x-2 flex items-center max-w-sm mx-auto rounded-full border border-transparent transition-colors group-hover:border-gray-400 group-hover:bg-blue-300 group-hover:dark:border-neutral-700 group-hover:dark:bg-neutral-500/30"
         >
           <Image className="w-auto h-auto dark:invert group-hover:invert"

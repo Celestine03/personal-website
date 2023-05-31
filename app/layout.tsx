@@ -7,11 +7,6 @@ import { ThemeProvider } from 'next-themes'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: "Celestine's website",
-  description: 'Created by Celestine Tan',
-}
-
 export default function RootLayout({
   children,
 }: {
