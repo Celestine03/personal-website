@@ -7,9 +7,9 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 export async function generateStaticParams() {
   const files = fs.readdirSync(path.join('thoughts'));
 
-  const paths = files.map(filename => {
-    slug: filename.replace('.mdx', '');
-  })
+  const paths = files.map(filename => 
+    filename.replace('.mdx', '')
+  )
 
   return paths;
 }
