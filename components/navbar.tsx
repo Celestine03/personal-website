@@ -5,7 +5,7 @@ import {useState, useEffect} from "react";
 
 export default function Navbar() {
 
-  const themeSwitch = () => {
+  const ThemeSwitch = () => {
     const [mounted, setMounted] = useState(false);
     const {theme, setTheme} = useTheme();
 
@@ -42,7 +42,7 @@ export default function Navbar() {
             Thoughts
           </p>
         </Link>
-        {themeSwitch()}
+        {ThemeSwitch()}
       </div>
     </nav>
   )
