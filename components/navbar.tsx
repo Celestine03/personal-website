@@ -37,7 +37,7 @@ export default function Navbar() {
             Home
           </p>
         </Link>
-        <Link href="/thoughts">
+        <Link href="/thoughtsPage">
           <p className="flex text-xl font-semibold px-4 rounded-full item-center transition-colors dark:text-white hover:border-gray-400 hover:bg-white hover:text-blue-300 hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30 hover:dark:text-white">
             Thoughts
           </p>
