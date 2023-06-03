@@ -28,9 +28,9 @@ export default function Thoughts() {
   return (
     <div className='text-center'>
       <p className='text-5xl font-bold m-10 border-b border-black dark:border-white'>
-        Coming soon
+        Constantly thinking
       </p>
-      {/* <p className='text-3xl font-semivold mt-10'>Tech</p>
+      <p className='text-3xl font-semivold mt-10'>Tech</p>
       <div className='flex flex-row justify-center space-x-10 m-5'>
         {technicals.map(thought => (
           <Link href={'/thoughts/' + thought.slug} passHref key={thought.slug} className='border rounded-sm p-5 lg:w-1/5 w-1/3 h-auto flex flex-col justify-between space-y-3 m-5 border-black dark:border-white'>
@@ -49,7 +49,7 @@ export default function Thoughts() {
             <p className='text-sm font-sans font-light'>{thought.meta.date}</p>
           </Link>
         ))}
-      </div> */}
+      </div>
     </div>
   )
 }
