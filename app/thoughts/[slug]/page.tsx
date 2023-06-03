@@ -5,7 +5,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 
 // statically generate routes at build time
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join('thoughts'));
+  const files = fs.readdirSync(path.join(process.cwd(), 'thoughts'));
 
   const paths = files.map(filename => 
     filename.replace('.mdx', '')
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 
 // fetch
 function getPost({slug}:{slug: string}) {
-  const markdownFile = fs.readFileSync(path.join('thoughts', slug + '.mdx'), 'utf-8');
+  const markdownFile = fs.readFileSync(path.join(process.cwd(), 'thoughts', slug + '.mdx'), 'utf-8');
 
   const {data: frontMatter, content} = matter(markdownFile);
 
