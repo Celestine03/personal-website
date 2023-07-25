@@ -3,13 +3,13 @@ import { useState } from 'react';
 import { supabase } from '../lib/supabase';
 
 const ContactForm = () => {
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState({ type: "", message: "" });
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setResponse('');
+    setResponse({ type: "", message: "" });
     try {
       const { error } = await supabase.from("contacts").insert({ name, email, message });
       if (error) {
@@ -18,10 +18,10 @@ const ContactForm = () => {
       setName('');
       setEmail('');
       setMessage('');
-      setResponse("Thank you! Your message has been successfully delivered.");
+      setResponse({ type: "Success", message: "Thank you! Your message has been successfully delivered." });
     } catch (error) {
       console.log(error);
-      setResponse("Something went wrong, please try again!");
+      setResponse({ type: "Error", message: "Something went wrong, please try again!" });
     }
   }
 
@@ -55,7 +55,9 @@ const ContactForm = () => {
             onChange={ e => setMessage(e.target.value) }
           />
         </div>  
-        <p>{ response }</p>
+        <p className={ response?.type === "Success" ? "border border-green-500 bg-green-200 text-green-800 rounded-lg p-1 text-center" : "border border-red-500 bg-red-200 text-red-800 rounded-lg p-1 text-center" }>
+          { response?.message }
+        </p>
         <button type="submit" className="rounded-lg py-1 w-full hover:border-gray-400 hover:bg-blue-300 hover:text-white hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30">Submit</button>
       </form>
     </div>
