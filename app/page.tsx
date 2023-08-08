@@ -6,7 +6,7 @@ import ContactForm from "@/components/contactForm";
 
 export default function Home() {
   return (
-    <main className="flex flex-col p-24">
+    <main className="flex flex-col sm:p-24 p-10">
         <Portrait />
         <Description />
         <About />

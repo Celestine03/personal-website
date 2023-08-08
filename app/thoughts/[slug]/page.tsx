@@ -28,7 +28,7 @@ export default function Post({params}: any) {
   const props = getPost(params);
 
   return (
-    <article className='dark:text-white prose dark:prose-blockquote:text-white dark:prose-h1:text-white dark:prose-a:text-white prose-h1:pt-10 flex flex-col my-10 md:mx-60 mx:40 space-y-5'>
+    <article className='dark:text-white prose dark:prose-blockquote:text-white dark:prose-h1:text-white dark:prose-a:text-white prose-h1:pt-10 flex flex-col my-10 lg:mx-60 mx-10 space-y-5'>
       <p className='text-5xl font-serif font-bold mb-3 border-b dark:border-white border-black'> {props.frontMatter.title}</p>
       {/* @ts-expect-error Server Component*/}
       <MDXRemote source={props.content}/>

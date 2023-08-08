@@ -27,7 +27,7 @@ const ContactForm = () => {
 
   return (
     <div className="space-y-5">
-      <h1 className="text-3xl font-semibold border-t mt-10 pt-10 dark:border-white border-black">Leave a message</h1>
+      <h1 className="text-2xl font-semibold border-t mt-10 pt-10 dark:border-white border-black">Leave a message</h1>
       <form onSubmit={ handleSubmit } className="space-y-2">
         <div className="flex md:flex-row flex-col">
           <label className="w-1/6">Name:</label>

@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export default function About() {
   return (
-    <div className="flex space-x-10 m-10 justify-center"> 
+    <div className="flex sm:flex-row flex-col sm:space-x-10 sm:space-y-0 space-y-10 m-10 justify-center"> 
       <div className="flex flex-col -mb-10 group">
         <Link
           href="/"
-          className="p-3 space-x-2 flex items-center max-w-sm mx-auto rounded-full transition-colors group-hover:border-gray-400 group-hover:bg-blue-300 group-hover:dark:border-neutral-700 group-hover:dark:bg-neutral-500/30"
+          className="p-3 space-x-2 flex items-center max-w-sm mx-auto rounded-full transition-colors border border-transparent group-hover:border-gray-400 group-hover:bg-blue-300 group-hover:dark:border-neutral-700 group-hover:dark:bg-neutral-500/30"
         >
           <Image className="w-auto h-auto dark:invert group-hover:invert"
             src="/resume-icon.png"
@@ -15,7 +15,7 @@ export default function About() {
             width={20}
             height={20}
           />
-          <p className="text-lg font-semibold group-hover:text-white">
+          <p className="sm:text-lg text-base font-semibold group-hover:text-white">
             Resume
           </p>
         </Link>
@@ -31,7 +31,7 @@ export default function About() {
             width={23}
             height={23}
           />
-          <p className="text-lg font-semibold group-hover:text-white">
+          <p className="sm:text-lg text-base font-semibold group-hover:text-white">
             Github
           </p>
         </Link>

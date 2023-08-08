@@ -26,8 +26,8 @@ export default function Thoughts() {
   const life = thoughts.filter(thought => thought.meta.tags == 'life').sort((a, b) => a.meta.id - b.meta.id).reverse();
 
   return (
-    <div className='text-center'>
-      <p className='text-5xl font-bold m-10 border-b border-black dark:border-white'>
+    <div className='text-center mb-10'>
+      <p className='sm:text-5xl text-3xl font-bold m-10 border-b border-black dark:border-white'>
         Constantly thinking
       </p>
       <p className='text-3xl font-semivold mt-10'>Tech</p>
