@@ -5,7 +5,6 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { ThemeProvider } from 'next-themes'
 import { Analytics } from '@vercel/analytics/react'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,11 +14,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    
       <html lang="en">
-        <Head>
+        <head>
           <meta name="google-site-verification" content="MCRlaMCoAi26zJKX8ZzFVTjLHKUQbhUAp_aH8_IsAL4" />
-        </Head>
+        </head>
         <body className={inter.className}>
           <ThemeProvider attribute="class">
             <Navbar />

@@ -3,6 +3,8 @@ import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 // statically generate routes at build time
 export async function generateStaticParams() {
@@ -42,6 +44,9 @@ export default function Post({params}: any) {
         />
       </Head>
       <article className='dark:text-white prose dark:prose-blockquote:text-white dark:prose-h1:text-white dark:prose-a:text-white prose-h1:pt-10 flex flex-col my-10 lg:mx-60 mx-10 space-y-5'>
+        <Link href="/thoughts" className="p-3 rounded-full hover:bg-slate-500 self-start">
+          <ArrowLeftIcon className="w-6 h-6" />
+        </Link>
         <p className='text-5xl font-serif font-bold mb-3 border-b dark:border-white border-black'>{props.frontMatter.title}</p>
         {/* @ts-expect-error Server Component*/}
         <MDXRemote source={props.content}/>
