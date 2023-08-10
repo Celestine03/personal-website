@@ -55,10 +55,10 @@ const ContactForm = () => {
             onChange={ e => setMessage(e.target.value) }
           />
         </div>  
-        <p className={ response?.type === "Success" ? "border border-green-500 bg-green-200 text-green-800 rounded-lg p-1 text-center" : "border border-red-500 bg-red-200 text-red-800 rounded-lg p-1 text-center" }>
+        <p className={ response?.type === "Success" ? "border border-success-2 bg-success-1 text-success-3 rounded-lg p-1 text-center" : "border border-error-2 bg-error-1 text-error-3 rounded-lg p-1 text-center" }>
           { response?.message }
         </p>
-        <button type="submit" className="rounded-lg py-1 w-full hover:border-gray-400 hover:bg-blue-300 hover:text-white hover:dark:border-neutral-700 hover:dark:bg-neutral-500/30">Submit</button>
+        <button type="submit" className="rounded-lg py-1 w-full hover:border-gray-2 hover:bg-slate-1 hover:text-white hover:dark:border-gray-3 hover:dark:bg-gray-1">Submit</button>
       </form>
     </div>
   );

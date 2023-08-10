@@ -44,7 +44,7 @@ export default function Post({params}: any) {
         />
       </Head>
       <article className='dark:text-white prose dark:prose-blockquote:text-white dark:prose-h1:text-white dark:prose-a:text-white prose-h1:pt-10 flex flex-col my-10 lg:mx-60 mx-10 space-y-5'>
-        <Link href="/thoughts" className="p-3 rounded-full hover:bg-slate-500 self-start">
+        <Link href="/thoughts" className="p-3 rounded-full hover:bg-slate-2 hover:text-white self-start">
           <ArrowLeftIcon className="w-6 h-6" />
         </Link>
         <p className='text-5xl font-serif font-bold mb-3 border-b dark:border-white border-black'>{props.frontMatter.title}</p>
