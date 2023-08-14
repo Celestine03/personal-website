@@ -44,7 +44,7 @@ export default function Thoughts() {
           Constantly thinking
         </p>
         <p className='text-3xl font-semibold mt-10'>Tech</p>
-        <div className='grid md:grid-cols-4'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
           {technicals.map(thought => (
             <Link href={'/thoughts/' + thought.slug} passHref key={thought.slug} className='border rounded-sm p-5 h-auto flex flex-col justify-between space-y-3 m-5 border-black dark:border-white'>
               <p className='text-2xl font-sans font-bold'>{thought.meta.title}</p>
@@ -54,7 +54,7 @@ export default function Thoughts() {
           ))}
         </div>
         <p className='text-3xl font-semibold mt-10'>Life</p>
-        <div className='grid md:grid-cols-4'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'>
           {life.map(thought => (
             <Link href={'/thoughts/' + thought.slug} passHref key={thought.slug} className='border rounded-sm p-5 h-auto flex flex-col justify-between space-y-3 m-5 border-black dark:border-white'>
               <p className='text-2xl font-sans font-bold'>{thought.meta.title}</p>
